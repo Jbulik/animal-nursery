@@ -30,7 +30,7 @@ donkey
 camel
 bulik@bulik-VirtualBox:~$ mv all_animals friends_of_human
 
-![Задание №1](pictures/Снимок экрана 2024-02-01 214025.jpg)
+![Задание №1](pictures/1.jpg)
 
 
 2. **Создание директории и перемещение файла:**
@@ -59,7 +59,7 @@ bulik@bulik-VirtualBox:~$ wget -c https://repo.mysql.com/RPM-GPG-KEY-mysql -O- |
 bulik@bulik-VirtualBox:~$ sudo apt update
 bulik@bulik-VirtualBox:~$ sudo apt install mysql-server
 
-![Задания №2 и №3](pictures/Снимок экрана 2024-02-01 214025.jpg)
+![Задания №2 и №3](pictures/2.jpg)
 
 
 4. **Установка и удаление deb-пакета с помощью dpkg:**
@@ -80,7 +80,7 @@ bulik@bulik-VirtualBox:~$ dpkg -l | grep mysql-server
 ii  mysql-server-8.0                           8.0.36-0ubuntu0.22.04.1                 amd64        MySQL database server binaries and system database setup
 ii  mysql-server-core-8.0                      8.0.36-0ubuntu0.22.04.1                 amd64        MySQL database server binaries
 
-![Задание №4](pictures/Снимок экрана 2024-02-01 214459.png)
+![Задание №4](pictures/3.jpg)
 
 
 5. **Выложение истории команд в терминале Ubuntu:**
@@ -90,6 +90,6 @@ ii  mysql-server-core-8.0                      8.0.36-0ubuntu0.22.04.1          
 ```bash
 bulik@bulik-VirtualBox:~$ history
 
-![ubuntu_history](pictures/Снимок экрана 2024-02-01 215157.jpg)
+![ubuntu_history](pictures/4.jpg)
  
 
