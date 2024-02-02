@@ -29,6 +29,7 @@ Horse
 donkey
 camel
 bulik@bulik-VirtualBox:~$ mv all_animals friends_of_human
+```
 
 ![Задание №1](pictures/1.jpg)
 
@@ -45,6 +46,7 @@ animal_nursery/
 └── friends_of_human
 
 0 directories, 1 file
+```
 
 3. **Подключение дополнительного репозитория MySQL и установка пакета:**
     - Подключить дополнительный репозиторий MySQL.
@@ -58,6 +60,7 @@ bulik@bulik-VirtualBox:~$ wget -c https://repo.mysql.com/RPM-GPG-KEY-mysql -O- |
 --2024-02-02 00:05:05--  https://repo.mysql.com/RPM-GPG-KEY-mysql
 bulik@bulik-VirtualBox:~$ sudo apt update
 bulik@bulik-VirtualBox:~$ sudo apt install mysql-server
+```
 
 ![Задания №2 и №3](pictures/2.jpg)
 
@@ -81,6 +84,7 @@ ii  mysql-server-8.0                           8.0.36-0ubuntu0.22.04.1          
 ii  mysql-server-core-8.0                      8.0.36-0ubuntu0.22.04.1                 amd64        MySQL database server binaries
 
 ![Задание №4](pictures/3.jpg)
+```
 
 
 5. **Выложение истории команд в терминале Ubuntu:**
@@ -89,6 +93,7 @@ ii  mysql-server-core-8.0                      8.0.36-0ubuntu0.22.04.1          
 
 ```bash
 bulik@bulik-VirtualBox:~$ history
+```
 
 ![ubuntu_history](pictures/4.jpg)
  
