@@ -3,6 +3,7 @@
 Задача выполняется в случае успешного выполнения задачи "Работа с MySQL в Linux. Установить MySQL на вашу машину".
 
 Я использую MobaXTerm на рабочем ПК (нет возможности установки софта). VM с Ubuntu и MySQL настроена на планшете (скрины с Ubuntu в предыдущих заданиях с планшета).
+![MobaXTerm] (pictures/MySQL1.png)
 
 7. В подключенном MySQL репозитории создать базу данных "Друзья человека":
 ```sql
@@ -10,8 +11,9 @@ CREATE DATABASE friends_of_human;
 ```
 
 ** Создать таблицы с иерархией из диаграммы в БД:**
-USE friends_of_human;
 
+USE friends_of_human;
+```sql
 -- Таблица Animals
 ```sql
 CREATE TABLE Animals (
@@ -43,6 +45,8 @@ CREATE TABLE PackAnimals (
     Commands VARCHAR(255)
 );
 
+![MobaXTerm] (pictures/MySQL2.png)
+
 -- Вставляем данные в таблицу "Pets"
 ```sql
 INSERT INTO Pets (Name, Type, BirthDate, Commands) VALUES
@@ -66,6 +70,8 @@ INSERT INTO PackAnimals (Name, Type, BirthDate, Commands) VALUES
     ('Burro', 'Donkey', '2019-01-23', 'Walk, Bray, Kick'),
     ('Blaze', 'Horse', '2016-02-29', 'Trot, Jump, Gallop'),
     ('Sahara', 'Camel', '2015-08-14', 'Walk, Run');
+
+![MobaXTerm] (pictures/MySQL3.png)
 
 -- Добавляем столбцы `animal_id` в таблицы `Pets` и `PackAnimals` в качестве внешних ключей:
 ```sql
@@ -93,9 +99,21 @@ SET animal_id =
         ELSE NULL
     END;
 
+![MobaXTerm] (pictures/MySQL4.png)
+
 -- Удаление записей о верблюдах из таблицы "Pack animals"
 ```sql
 UPDATE PackAnimals SET Type = 'Horse' WHERE Type = 'Donkey';
+![Удаление записи] (pictures/MySQL5.png)
+
+
+-- для объединения заменяем значение типа животного с "Donkey" на "Horse".
+-- Таким образом, записи о лошадях и осях будут объединены в одну группу.
+```sql
+UPDATE PackAnimals SET Type = 'Horse' WHERE Type = 'Donkey';
+
+![объединены в одну группу "Horse"](pictures/MySQL6.png)
+
 
 -- Создание новой таблицы для животных в возрасте от 1 до 4 лет
 ```sql
@@ -132,6 +150,15 @@ SELECT *,
         ), ' months'
     ) AS Age
 FROM AllAnimals;
+
++-----------+--------+---------+------------+-------------------+
+| animal_id | Name   | Type    | BirthDate  | Age               |
++-----------+--------+---------+------------+-------------------+
+|         3 | Hammy  | Hamster | 2021-03-10 | 2 years 10 months |
+|         5 | Smudge | Cat     | 2020-02-20 | 3 years 11 months |
+|         6 | Peanut | Hamster | 2021-08-01 | 2 years 6 months  |
+|         8 | Oliver | Cat     | 2020-06-30 | 3 years 7 months  |
++-----------+--------+---------+------------+-------------------+
 
 -- Создание общей таблицы с указанием принадлежности к исходным таблицам
 ```sql
