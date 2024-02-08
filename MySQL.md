@@ -45,7 +45,8 @@ CREATE TABLE PackAnimals (
     Commands VARCHAR(255)
 );
 
-![MobaXTerm] (pictures/MySQL2.png)
+![] (pictures/MySQL2.png)
+```
 
 -- Вставляем данные в таблицу "Pets"
 ```sql
