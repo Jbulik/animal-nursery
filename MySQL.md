@@ -45,7 +45,7 @@ CREATE TABLE PackAnimals (
     Commands VARCHAR(255)
 );
 
-![] (pictures/MySQL2.png)
+![таблицы] (pictures/MySQL2.png)
 ```
 
 -- Вставляем данные в таблицу "Pets"
@@ -72,7 +72,7 @@ INSERT INTO PackAnimals (Name, Type, BirthDate, Commands) VALUES
     ('Blaze', 'Horse', '2016-02-29', 'Trot, Jump, Gallop'),
     ('Sahara', 'Camel', '2015-08-14', 'Walk, Run');
 
-![MobaXTerm] (pictures/MySQL3.png)
+![таблицы] (pictures/MySQL3.png)
 
 -- Добавляем столбцы `animal_id` в таблицы `Pets` и `PackAnimals` в качестве внешних ключей:
 ```sql
@@ -100,7 +100,7 @@ SET animal_id =
         ELSE NULL
     END;
 
-![MobaXTerm] (pictures/MySQL4.png)
+![таблицы] (pictures/MySQL4.png)
 
 -- Удаление записей о верблюдах из таблицы "Pack animals"
 ```sql
